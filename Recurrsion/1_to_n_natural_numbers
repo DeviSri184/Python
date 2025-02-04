@@ -1,0 +1,9 @@
+def natural_numbers(n):
+    if n==0:
+        return 0
+    natural_numbers(n-1)
+    print(n)
+
+if __name__ == '__main__':
+    n=int(input())
+    natural_numbers(n)      
