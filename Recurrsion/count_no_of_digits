@@ -1,0 +1,36 @@
+"""Normal Approach"""
+n=int(input())
+count=0
+while n!=0:
+    count=count+1
+    n=n//10
+print(count)
+
+
+
+"""Recursion"""
+n=int(input())
+def count_digit(n):
+    if n==0:
+        return 0
+    return count_digit(n//10)+1
+
+print(count_digit(n))
+
+
+
+"""Using log10"""
+import math
+n=int(input())
+def count(n):
+    if n==0:
+        return 1
+    return math.floor(math.log10(n)) + 1
+    #return math.ceil(math.log10(n)) It gives: # Output: 3 (Wrong! Should be 4)
+print(count(n))
+
+
+
+"""Simple Approach"""
+n=input()
+print(len(n))
