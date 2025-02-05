@@ -1,0 +1,31 @@
+"""String palindrome-Normal method"""
+val = input()
+rev = val[::-1]
+print(("No","YES")[val==rev])
+
+
+"""Recursion"""
+val = list(input())
+size = len(val)-1
+def palin(val,st,end):
+    if st>=end:
+        print("Palindrome")
+        return
+    elif val[st]!=val[end]:
+        print("Not a palindrome")
+        return
+    palin(val, st+1, end-1)
+
+palin(val,0,size)
+
+
+"""Using Loop"""
+val=list(val)
+length = len(val)
+for i in range(0,length):
+    if i>=length//2:
+        print("Palindrome")
+        break
+    elif val[i] != val[length-i-1]:
+        print("Not palindrome")
+        break
