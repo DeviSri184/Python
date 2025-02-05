@@ -1,0 +1,18 @@
+"""Reverse array list.."""
+val = [1,2,3,4]
+for i in range(0,len(val)):
+    if i >= len(val)//2:
+        break
+    val[i],val[len(val)-1-i] = val[len(val)-1-i],val[i]
+print(val)
+
+
+"""Recursion..."""
+val = [1,2,3,4]
+def rever(val,st,end):
+    if st >= end:
+        print(val)
+        return
+    val[st],val[end]=val[end],val[st]
+    rever(val,st+1,end-1)
+rever(val,0,len(val)-1)
