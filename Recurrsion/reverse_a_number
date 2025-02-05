@@ -1,0 +1,21 @@
+"""Reverse a numer"""
+n=input()
+print(int(n[::-1]))
+
+
+"""Reverse a number using recursion"""
+n=int(input())
+def rever(n,rev=0):
+    if n==0:
+        return rev
+    return rever(n//10,rev*10+(n%10))
+print(rever(n))
+
+
+"""Reverse a  number in normal method"""
+n=int(input())
+rev=0
+while n!=0:
+    rev=rev*10+(n%10)
+    n=n//10
+print(rev)
