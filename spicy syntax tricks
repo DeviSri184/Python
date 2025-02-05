@@ -1,1 +1,24 @@
+1) """Indexing with a Boolean Expression."""
+How It Works?
+    If temp == rev is True (1), it prints "Yes" (index 1).
+    If temp == rev is False (0), it prints "No" (index 0).
+    Example:
+        temp = 121
+        rev = 121
+        print(("No", "Yes")[temp == rev])  # Output: Yes
+        
+        temp = 123
+        rev = 321
+        print(("No", "Yes")[temp == rev])  # Output: No
 
+2)🔥 The Walrus Operator (:=) – Assignment Inside Expressions
+      Instead of:
+          n = input("Enter a number: ")
+          if n.isdigit():
+              print("You entered:", n)
+      You can do this in one line using the walrus operator (:=):
+          if (n := input("Enter a number: ")).isdigit():
+              print("You entered:", n)
+      
+      n := input("Enter a number: ") assigns the value inside the if condition.
+      So, you don’t need a separate line for assignment!
