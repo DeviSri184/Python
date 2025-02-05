@@ -1,0 +1,19 @@
+"""Recursion..."""
+n=int(input())
+def recur(n):
+    if n==1 or n==2:
+        return 1
+    return recur(n-1) + recur(n-1)
+print(recur(n))
+
+"""Normal fibonacci"""
+n=int(input())
+n0 =0
+n1 =1
+n2 =1
+print(n0,n1, end=" ")
+for i in range(3,n+1):
+    n3=n1+n2
+    n1=n2
+    n2=n3
+    print(n3,end=" ")
