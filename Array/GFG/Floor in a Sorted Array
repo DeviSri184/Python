@@ -1,0 +1,13 @@
+# https://www.geeksforgeeks.org/problems/floor-in-a-sorted-array-1587115620/1?page=1&category=Searching&sortBy
+
+arr = [1, 2, 8, 10, 11, 12, 19], k = 5
+o/p: 1
+
+def find_floor(arr,k):
+    for i in range(len(arr)):
+        if arr[i] == k:
+            return i
+        if arr[i] > k:
+            return i-1
+    return -1
+print(find_floor(arr,k))
