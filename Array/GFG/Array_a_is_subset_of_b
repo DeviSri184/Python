@@ -1,0 +1,27 @@
+# https://www.geeksforgeeks.org/problems/array-subset-of-another-array2317/1?page=1&category=Searching&sortBy
+
+a = [11, 7, 1, 13, 21, 3, 7, 3]
+b = [11, 3, 7, 1, 7]
+
+d1 = {}
+
+
+def subset(a, b):
+    for i in a:
+        if i not in d1:
+            d1[i] = 1
+        else:
+            d1[i] += 1
+
+    for i in b:
+        if i not in d1:
+            return False
+        if i in d1 and d1[i] < 1:
+            return False
+        else:
+            d1[i] -= 1
+
+    return True
+
+
+print(subset(a, b))
