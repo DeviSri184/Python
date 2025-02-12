@@ -1,0 +1,31 @@
+# https://leetcode.com/problems/two-sum/
+
+"""Optimal Approach"""
+
+nums = [2, 7, 11, 15]
+target = 9
+
+
+def two_sum(arr, t):
+    hashmap = {}
+    for i in range(len(arr)):
+        complement = t - arr[i]
+        if complement in hashmap:
+            return [hashmap[complement], i]
+        hashmap[arr[i]] = i
+    return []
+
+print(two_sum(nums, target))
+
+
+"""BruteForce"""
+
+def two_sum(arr, t):
+    for i in range(len(arr)-1):
+        for j in range(len(arr)):
+            if arr[i] + arr[j] == t:
+                return [i, j]
+    return []
+
+print(two_sum(nums, target))
+
